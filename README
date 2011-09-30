@@ -1,0 +1,74 @@
+UltraRogue: The Ultimate Adventure in the Dungeons of Doom
+Copyright (C) 1985, 1986, 1992, 1993, 1995 Herb Chong
+All rights reserved.
+
+There are 8 different treasures to be picked up in this version of rogue.
+The first is on level 25 and is relatively easy to pick up.  The last is
+on level 100 and is very difficult to get.  Carrying any one of the
+unique treasures allows the rogue to go up the stairs, but one has to
+be very careful.  To be a total winner, yu must pick up all 8 and
+return to the surface again.
+
+(note: the above may be incorrect, i think the number of levels is
+reduced to 50 and you have to get all 8 artifacts to go back up)
+
+The environment variable UROGUE is used to set up the default things
+for a player.  The options that can be set are:
+
+terse:		short output messages
+flush:		flush typeahead when fighting
+jump:		show position only at the end of running
+inven:		inventory style
+askme:		ask about unidentified things
+stopdoor:       stop running when next to something interesting
+name:		the rogue's name (string)
+fruit:		the funny fruit used by the rogue (string)
+file:		default savefile name (string)
+score:		default scorefile name (string)
+class:		default player class (string)
+
+Something like
+
+setenv UROGUE "name=George of the Jungle,fruit=peach,noterse,jump"
+
+does the obvious.  The "score" option is ignored unless you start
+urogue in wizard mode.  The class option string can have the following
+values: "fighter", "illus", "paladin", "ranger", "cleric", "magic",
+"assasin", "druid", "ninja", and "thief" and is initialized only at
+startup time.  The "inven" option can take the values "slow", "clear",
+and "overwrite".
+
+
+About the Author
+================
+
+Herb Chong is currently freelance writing and doing some teaching.
+If you pick up a copy of Windows Sources Magazine, you can usually
+find something he has written. Starting in October (1993) he will
+have a regular column. Herb has also just started teaching Adult Ed
+and undergraduate classes at Mercy College, a small and not very well
+known college in Westchester, NY.
+
+Acknowledgements
+================
+
+The source code for Rogue 3.6 (by Michael Toy, Ken Arnold and Glenn 
+Wichman) was used as the original basis for this game. A thousand 
+thanks go out to them and their classic adventure game of the early 1980s.
+
+Modifications of a long forgotten and bastardized nature were taken
+from Advanced Rogue 1.0 and/or SuperRogue. We believe that the flea market, 
+pools, and maze levels had their origin somewhere around here. 
+
+Chief Architect   : 	Herb Chong
+
+Major Contributers: 	Carlton Hommel	Mike Cooper 	Mike Laman
+			Jason Venner	Nick Kisseberth
+
+Other Contributers: 	Nick Flor	Henry Chai	Pat Place
+			Michael Maudlin	dan@ciprico 	edjames@ucbshadow
+			Web Dove	Tim Haapanen	tecot@cmu-cs-k.arpa
+
+Any omissions or errors are purely unintentional. The above list was
+compiled by Nick Kisseberth from the change log in UltraRogue through
+1987 and from correspondense with Herb Chong.

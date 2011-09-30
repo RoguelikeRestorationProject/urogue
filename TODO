@@ -1,0 +1,23 @@
+UltraRogue: The Ultimate Adventure in the Dungeons of Doom
+Copyright (C) 1993, 1995 Herb Chong
+All rights reserved.
+
+%W% %G%
+
+add_pack() calls ur_free() on the linked list pointer passed
+to it. Need to go through code and look for cases where we
+use that pointer after calling add_pack(). Electric
+fence in guard-free() mode should help.
+
+Similary throw_away(), discard(), discard_pack() free items...
+there will be more like this...
+
+Bug in genocide scroll: don't request list, type letter, etc...
+
+Implement potion of true sight.
+
+Bug: apparently when creating a new familiar after a player level
+change, something isn't begin reset because ur SEGVs when running
+through the monster list in do_chase() right after the new
+familiar is created. It appears that the familiar isn't being removed
+from the monster list.
